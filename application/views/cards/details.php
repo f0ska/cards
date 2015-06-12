@@ -30,7 +30,7 @@
                         </tr>
                         <tr>
                             <td>Last usage date</td>
-                            <td><?=$card->used?></td>
+                            <td><?=$card->used?$card->used:'Never'?></td>
                         </tr>
                         <tr>
                             <td>Card sum:</td>

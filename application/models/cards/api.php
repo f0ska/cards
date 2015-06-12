@@ -10,6 +10,8 @@ class Api extends Cards
     public function add_purchase($series, $number, $sum, $description)
     {
         $sum = round($sum * 1, 2);
+        $number = trim(str_replace(' ', '', $number)); // trim is for tabs and other
+        $series = trim($series);
 
         $this->db->select('id');
         $this->db->where('series', $series);
